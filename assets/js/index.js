@@ -9,8 +9,6 @@ function sumatoria_ejercicio1() {
         `
     }
 }
-
-
 //EJERCICO PIZZERIA-------------------------------------------------------------------------------------------------------------------------
 var edadPizzeria = document.getElementById('edadPizzeria')
 var generoPizzeria = document.getElementById('generoPizzeria')
@@ -66,6 +64,24 @@ function verificarImparPar (){
         document.querySelector('.mensajeParImpar').innerHTML = 'Este número es IMPAR '
     }
 }
+
+//EJERCICO MULTIPLICAR ---------------------------------------------------------------------------------------------------
+var numeroMulpiplicador = document.querySelector('#numeroAmultiplicar').value
+var vecesAmultiplicar = 10
+
+function multiplicarTabla (){
+for (let i = 1; i <= vecesAmultiplicar; i++)
+document.querySelector('.mensajeMulpiplicar').innerHTML = numeroMulpiplicador.value + + "x" + i + "="+ (numeroMulpiplicador*i)
+
+}
+
+
+
+
+
+
+
+
 
 //EJERCICO PROMEDIO MATRICULA ---------------------------------------------------------------------------------------------------
 
