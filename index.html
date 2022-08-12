@@ -12,8 +12,8 @@
 <body>
     <style>
         .form-check-input:checked {
-            background-color: #04ca0a !important;
-            border-color: #0b4d09 !important;
+            background-color: #c62222 !important;
+            border-color: #370202 !important;
         }
     </style>
     <main class="container col-8 border border-success mt-5 mb-5">
@@ -22,24 +22,27 @@
                 <p class="d-flex justify-content-center  align-content-end h1 text-white">EJERCICIO DE LOGICA </p>
             </section>
             <section>
-                <!-- Empieza Ejercio SUMAR 1 A N -->
+                <!-- Empieza Ejercici SUMAR 1 A N -->
                 <div class="container p-3 mt-4 sumar" style="background-color: rgb(210, 210, 210);">
                     <label class=" mb-4 fs-3">01 - Sumar 1 A N</label>
-
                     <div>
                         <label class="form-label ">Ingresar un número:</label>
-                        <input type="number" min="1" class="form-control" id="numeroEjercicio01">
-                        <button onclick="sumatoria_ejercicio01 ()" id="btnEjercicio01" class="btn btn-primary mt-5" type="button">CALCULAR</button>
+                        <input type="number" min="1" class="form-control" id="numero_ejercicio">
+                        <button onclick="sumatoria_ejercicio1()" id="btnEjercicio01" class="btn btn-primary mt-5" type="button">CALCULAR</button>
+                        <h3 id="total_sumatoria_resultado"></h3>
                     </div>
-
                 </div>
-
-
                 <!-- TERMINA EJERCICO SUMAR 1 A N------------------------- -->
 
                 <!-- Empieza Ejerciio PAR O IMPAR  -->
-                <div class="container p-3 mt-4 parImpar" style="background-color: rgb(255, 255, 255);">
+                <div class="container p-3 mt-4 parImpar" style="background-color: rgb(97, 171, 188);">
                     <label class=" mb-4 fs-3">02 - Número PAR O IMPAR </label>
+                    <div class="col-12">
+                        <label class="form-label">Escriba un número:</label>
+                        <input type="number" min="0" class="form-control" id="numeroIngresado">
+                        <button onclick="verificarImparPar()" class="btn btn-info mt-5" type="button">Comprobar</button>
+                        <div class="col-12 mt-3 mensajeParImpar" style=" background-color: rgba(255, 255, 255, 0.942); height: 40px;"></div>
+                    </div>
                 </div>
                 <!-- TERMINA Ejerciio PAR O IMPAR------------------------- -->
 
@@ -65,23 +68,59 @@
                             type="button">¿Tienes Premio?</button>
                         <p>Gracias por participar, Nuestra pizzeria te informa que:</p>
                         <div class="col-12 mt-3 mensajePremio" style=" background-color: rgba(255, 255, 255, 0.942); height: 50px;"></div>
+                </div>
+                </form>
+                <!-- TERMINA Ejercicio PIZZERIA------------------------- -->
 
+                <!-- Empieza Ejercicio QUE COMER   -->
+                <div class="container p-3 mt-4 queComer" style="background-color: #f43737;">
+                    <label class=" mb-4 fs-3">04 - ¿QUE QUIERES COMER? </label>
+
+
+                    <div class="container p-3 mt-4 tipoComida" style="background-color: rgb(255, 158, 158);">
+                        <label class=" mb-4 fs-3">Menu Disponible:</label>
+                        <div class="d-flex flex-column ">
+                            <div class=" form-check">
+                                <input class="form-check-input" type="checkbox" value="Películas de Acción" id="hamburguesa">
+                                <label class="form-check-label" for="gridCheck">Hamburguesa</label>
+                                <p>$14000</p>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Películas de Drama" id="perroCaliente">
+                                <label class="form-check-label" for="gridCheck">Perro Caliente</label>
+                                <p>$12000</p>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Películas de Aventura" id="gaseosa">
+                                <label class="form-check-label" for="gridCheck">Gaseosa</label>
+                                <p>$3000</p>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Películas de Ficción" id="ensalada">
+                                <label class="form-check-label" for="gridCheck">Ensalada</label>
+                                <p>$12000</p>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Películas Animadas" id="helado">
+                                <label class="form-check-label" for="gridCheck">Helado</label>
+                                <p>$5000</p>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Otras Películas" id="tinto">
+                                <label class="form-check-label" for="gridCheck">Tinto</label>
+                                <p>$2000</p>
+                            </div>
+                            <div></div>
+                        </div>
                 </div>
 
 
 
 
 
-                </form>
 
 
 
-
-                <!-- TERMINA Ejercicio PIZZERIA------------------------- -->
-
-                <!-- Empieza Ejercicio QUE COMER   -->
-                <div class="container p-3 mt-4 queComer" style="background-color: rgb(255, 255, 255);">
-                    <label class=" mb-4 fs-3">04 - ¿QUE QUIERES COMER? </label>
                 </div>
                 <!-- TERMINA Ejercicio QUE COMER------------------------- -->
 
@@ -102,112 +141,10 @@
                         <label class="form-label">Ingresar su promedio de notas del semestre:</label>
                         <input type="number" min="1" class="form-control" id="promedioNotas">
                         <button onclick="calculaDescuentoMatricula ()" id="btnEjercicio06" class="btn btn-danger mt-5" type="button">Comprobar Descuento</button>
-                        <div class="col-12 mt-3 mensajePremio" style=" background-color: rgba(255, 255, 255, 0.942); height: 40px;"></div>
+                        <div class="col-12 mt-3 mensajeDescuento" style=" background-color: rgba(255, 255, 255, 0.942); height: 40px;"></div>
                     </div>
-
-
                 </div>
                 <!-- TERMINA Ejercicio VALOR MATRICULA ------------------------- -->
-
-
-
-
-
-
-
-
-                <div>
-                    <form class="row g-4 m-2">
-                        <div class="col-12 nombre">
-                            <label for="inputEmail4" class="form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="nombre">
-                            <div></div>
-                        </div>
-                        <div class="col-12 apellido">
-                            <label for="inputPassword4" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellido">
-                            <div></div>
-                        </div>
-                        <div class="col-12 celular">
-                            <label for="inputPassword4" class="form-label">Celular:</label>
-                            <input type="number" class="form-control" id="celular">
-                            <div></div>
-                        </div>
-                        <div class="col-12 correo">
-                            <label for="inputAddress2" class="form-label">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="correo">
-                            <div></div>
-                        </div>
-                        <div class="col-6 fecha_nacimiento">
-                            <label for="inputAddress" class="form-label">Fecha de Nacimiento:</label>
-                            <input type="date" class="form-control" id="fecha_nacimiento">
-                            <div></div>
-                        </div>
-                        <div class="col-6 genero">
-                            <label for="inputState" class="form-label">Género:</label>
-                            <select id="genero" class="form-select">
-                                <option value="" selected disabled>Seleccionar género</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                            </select>
-                            <div></div>
-                        </div>
-                        <div class="col-md-6 contrasena">
-                            <label for="inputCity" class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="contrasena"
-                                placeholder="Escribir contaseña">
-                            <div></div>
-                        </div>
-                        <div class="col-md-6  verificarContrasena">
-                            <label for="inputCity" class="form-label">Verificar Contraseña:</label>
-                            <input type="password" class="form-control" id="verificarContrasena"
-                                placeholder="Escribir nuevamente la contarseña">
-                            <div></div>
-                        </div>
-                        <div class="container p-3 mt-4 tipoPeliculas" style="background-color: rgb(210, 210, 210);">
-                            <label class=" mb-4 fs-3">Tipos de pelicula:</label>
-                            <div class="d-flex flex-row ">
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="Películas de Acción"
-                                        id="peli_accion">
-                                    <label class="form-check-label" for="gridCheck">Acción</label>
-                                </div>
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="Películas de Drama"
-                                        id="peli_drama">
-                                    <label class="form-check-label" for="gridCheck">Drama</label>
-                                </div>
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="Películas de Aventura"
-                                        id="peli_aventura">
-                                    <label class="form-check-label" for="gridCheck">Aventura</label>
-                                </div>
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="Películas de Ficción"
-                                        id="peli_ficcion">
-                                    <label class="form-check-label" for="gridCheck">Ficción</label>
-                                </div>
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="Películas Animadas"
-                                        id="peli_animadas">
-                                    <label class="form-check-label" for="gridCheck">Animadas</label>
-                                </div>
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="Otras Películas"
-                                        id="peli_otras">
-                                    <label class="form-check-label" for="gridCheck">Otras</label>
-                                </div>
-                                <div></div>
-                            </div>
-
-                            <div class="d-grid gap-2">
-                                <button onclick="registroUsuario()" id="btnEnviar" class="btn btn-success mt-5"
-                                    type="button">Regístrate</button>
-                            </div>
-                    </form>
-                </div>
-            </section>
-        </div>
 
     </main>
 
